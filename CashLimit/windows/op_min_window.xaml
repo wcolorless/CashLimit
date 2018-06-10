@@ -1,0 +1,28 @@
+﻿<Window x:Class="CashLimit.op_min_window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CashLimit"
+        mc:Ignorable="d"
+        Title="op_add" Height="250" Width="500" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" BorderBrush="Black" BorderThickness="1">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#FF4A9365" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+            <Image Height="50" Width="50" Source="/CashLimit;component/img/blue_close.png" HorizontalAlignment="Right" VerticalAlignment="Top" MouseLeftButtonDown="close"/>
+            <Label Content="Расход" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Consolas" FontSize="18" FontWeight="Bold"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Label Content="Сумма расхода:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Consolas" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="value_box" HorizontalAlignment="Left" Height="23" Margin="173,15,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="155" FontFamily="Tahoma" FontSize="18"/>
+            <TextBox x:Name="description_box" HorizontalAlignment="Left" Height="79" Margin="10,77,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="478" FontFamily="Tahoma" FontSize="18"/>
+            <Label Content="Описание:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" FontFamily="Consolas" FontSize="18" FontWeight="Bold"/>
+            <Button Content="Добавить" HorizontalAlignment="Left" Margin="10,172,0,0" VerticalAlignment="Top" Width="75" Background="#FF4A9365" Click="add_to_database_btn"/>
+            <Button Content="Отмена" HorizontalAlignment="Left" Margin="413,172,0,0" VerticalAlignment="Top" Width="75" Click="cancel_btn"/>
+
+        </Grid>
+    </Grid>
+</Window>
